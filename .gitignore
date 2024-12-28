@@ -1,0 +1,7 @@
+machetejs.txt
+data.pdf
+
+
+*.txt 
+/node_modules
+
