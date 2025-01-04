@@ -10,7 +10,7 @@ app.get('/navidad', function (req, res) {
 })
 
 app.get('/otranavidad', function (req, res) {
-  res.send('Feliz navidad y prospero año nuevo')
+  res.send('Y feliz año nuevo')
 })
 
 app.listen(3000)
