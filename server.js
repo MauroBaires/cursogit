@@ -5,6 +5,9 @@ const PORT = 3000
 
 app.set('view engine', 'hbs');
 
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+
 app.get('/', function (req, res) {
   res.send('Bienvanidos a nuestro primer servidor con Express')
 })
@@ -16,6 +19,18 @@ app.get('/navidad', function (req, res) {
 
 app.get('/formulario', function (req, res) {
    res.render('formulario')
+ })
+
+ /*para recibir datos desde el front*/
+
+ app.post('/formulario', function(req, res){
+  console.log(req);
+  
+  const email = req.body.email;
+  const password = req.body.password;
+
+  console.log('Datos recibidos' + email + ' ' + password);
+  res.send('Datos recibidos');
  })
 
 app.listen(PORT, ()=> {

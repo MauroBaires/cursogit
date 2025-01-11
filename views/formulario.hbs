@@ -2,12 +2,18 @@
     Formulario de Login
 </h1>
 <div class="container">
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleFormControlInput1>
-    </div>
+    <form action="/formulario" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="Contraseña" required>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            <input type="reset" class="btn btn-danger" value="Borrar">
+        </div>
+    </form>
 </div>
